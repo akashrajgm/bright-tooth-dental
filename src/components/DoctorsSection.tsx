@@ -9,9 +9,9 @@ const DOCTORS = [
     subtitle:   "Expert in Aesthetic, Restorative, Preventative & Conservative Smile Design",
     initials:   "DH",
     gender:     "female",
-    credentials:"BDS · Advanced Cosmetic Dentistry",
+    credentials:"BDS – Cosmetic & Restorative Dentistry",
     specialties:["Aesthetic Dentistry", "Restorative Smiles", "Laser Fillings", "Teeth Polishing"],
-    quote:      "\"Your comfort and confidence are the foundation of everything I do. A pain-free, beautiful smile is not a luxury — it is your right.\"",
+    quote:      "\"Your comfort and confidence are the foundation of everything I do. A comfortable, beautiful smile is not a luxury — it is your right.\"",
     avatarGrad: "from-[#FF6F91] via-[#D5006D] to-[#8B005D]",
     accentColor:"#D5006D",
     slideFrom:  -70,
@@ -22,7 +22,7 @@ const DOCTORS = [
     subtitle:   "Specialist in Advanced Root Canals, Oral Extractions, Caps & Maxillofacial Surgery",
     initials:   "SD",
     gender:     "male",
-    credentials:"BDS · MDS · Oral & Maxillofacial Surgery",
+    credentials:"BDS, MDS – Oral & Maxillofacial Surgery",
     specialties:["Root Canal Therapy", "Dental Implants", "Oral Surgery", "Extractions"],
     quote:      "\"Precision, patience, and empathy — these are the cornerstones of exceptional dental care that truly transforms lives.\"",
     avatarGrad: "from-[#3D5166] via-[#2C3E50] to-[#1a2530]",
@@ -65,7 +65,7 @@ export default function DoctorsSection() {
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-raspberry mb-4 bg-brand-rose-mid px-4 py-1.5 rounded-full border border-brand-raspberry/20"
           >
             <Star className="w-3.5 h-3.5 fill-brand-raspberry text-brand-raspberry" />
-            Meet Our Elite Doctors
+            Meet Our Dedicated Care Team
           </motion.span>
 
           <motion.h2
@@ -75,7 +75,7 @@ export default function DoctorsSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-serif text-4xl md:text-5xl font-bold text-brand-navy mb-5 leading-tight"
           >
-            Precision Meets{" "}
+            Excellence Meets{" "}
             <span className="italic font-normal gradient-text-raspberry">Compassion.</span>
           </motion.h2>
 
@@ -87,8 +87,8 @@ export default function DoctorsSection() {
             className="text-brand-navy/60 font-light leading-relaxed text-base md:text-lg"
           >
             Two extraordinary specialists who have built Bright Tooth&apos;s
-            reputation for painless, masterful dental artistry.
-            Rated <strong className="text-brand-raspberry font-bold">5.0 ★ Rating | 100+ Google Reviews.</strong>
+            reputation for gentle, comfort-focused dental care.
+            Trusted by hundreds of families in Bengaluru.
           </motion.p>
         </div>
 
@@ -227,10 +227,10 @@ export default function DoctorsSection() {
           className="grid grid-cols-2 gap-4 max-w-xl mx-auto justify-items-center items-center mt-12"
         >
           {[
-            "5.0 ★ Rating | 100+ Google Reviews",
+            "5.0 ★ Rated Clinic",
             "100+ Patients Treated",
-            "Completely Painless Procedures",
-            "Open 7 Days: 9 AM – 9 PM",
+            "Designed for Patient Comfort",
+            "Open All 7 Days",
           ].map((item, index) => (
             <div
               key={`${item}-${index}`}
@@ -246,3 +246,4 @@ export default function DoctorsSection() {
     </section>
   );
 }
+

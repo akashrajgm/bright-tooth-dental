@@ -11,9 +11,9 @@ const DOCTORS = [
     accentColor: "from-brand-teal to-brand-cyan",
     glowColor: "shadow-brand-teal/30",
     specialties: ["Aesthetic Dentistry", "Laser Cavity Fillings", "Teeth Polishing"],
-    credentials: "BDS · Advanced Cosmetic Dentistry",
+    credentials: "BDS – Cosmetic & Restorative Dentistry",
     quote:
-      "\"My philosophy is simple — your comfort is our priority. Every patient deserves a painless, beautiful smile.\"",
+      "\"My philosophy is simple — your comfort is our priority. Every patient deserves a gentle, beautiful smile.\"",
     direction: "left" as const,
   },
   {
@@ -23,7 +23,7 @@ const DOCTORS = [
     accentColor: "from-brand-cyan to-emerald-400",
     glowColor: "shadow-brand-cyan/30",
     specialties: ["Root Canal Therapy", "Oral Surgery", "Restorative Dentistry"],
-    credentials: "BDS · MDS · Oral Surgery",
+    credentials: "BDS, MDS – Oral & Maxillofacial Surgery",
     quote:
       "\"Precision and empathy are the twin pillars of exceptional dental care. I strive to deliver both.\"",
     direction: "right" as const,
@@ -69,7 +69,7 @@ export default function DoctorsLounge() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-serif text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
           >
-            Precision in Every{" "}
+            Excellence in Every{" "}
             <span className="italic font-normal gradient-text">Procedure.</span>
           </motion.h2>
           <motion.p
@@ -80,7 +80,7 @@ export default function DoctorsLounge() {
             className="text-white/50 font-light leading-relaxed text-base md:text-lg"
           >
             Meet the two extraordinary clinicians who have built Bright Tooth&apos;s
-            reputation for painless, masterful dental care in Bengaluru.
+            reputation for gentle, comfort-focused dental care in Bengaluru.
           </motion.p>
         </div>
 

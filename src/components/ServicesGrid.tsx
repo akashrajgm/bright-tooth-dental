@@ -8,9 +8,9 @@ const SERVICES = [
   {
     icon:     Microscope,
     title:    "Advanced Root Canal Treatment",
-    desc:     "Precision treatment using advanced digital microscopes. Designed to preserve your natural tooth structure with absolute comfort and zero pain.",
+    desc:     "Detailed treatment using advanced digital microscopes. Designed to preserve your natural tooth structure with absolute comfort and gentle care.",
     tag:      "Most Requested",
-    benefit:  "Microscope precision · Painless technology",
+    benefit:  "Microscope detail · Comfort-focused tech",
     iconColor:"text-brand-raspberry",
     iconBg:   "bg-brand-rose",
     image:    "/service_root_canal.png",
@@ -27,9 +27,9 @@ const SERVICES = [
   },
   {
     icon:     Crown,
-    title:    "Precision Teeth Restoration",
-    desc:     "Custom structural repair with high-durability porcelain and zirconia crowns engineered for a premium, authentic smile that lasts.",
-    tag:      "Premium",
+    title:    "Advanced Teeth Restoration",
+    desc:     "Custom structural repair with high-durability porcelain and zirconia crowns engineered for a natural, healthy smile that lasts.",
+    tag:      "Restoration",
     benefit:  "Custom zirconia · Porcelain crowns",
     iconColor:"text-amber-500",
     iconBg:   "bg-amber-50",
@@ -96,7 +96,7 @@ export default function ServicesGrid() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-serif text-4xl md:text-5xl font-bold text-brand-navy mb-5 leading-[1.1]"
           >
-            World-Class Care,
+            Expert Care,
             <span className="block italic font-normal gradient-text-raspberry">
               Engineered for Comfort.
             </span>
@@ -109,8 +109,8 @@ export default function ServicesGrid() {
             transition={{ duration: 0.6, delay: 0.18 }}
             className="text-brand-navy/60 font-light leading-relaxed text-base md:text-lg max-w-xl"
           >
-            We merge medical precision with refined aesthetics. Every service
-            is calibrated to deliver painless, restorative results.
+            We merge clinical expertise with refined aesthetics. Every service
+            is calibrated to deliver comfortable, restorative results.
           </motion.p>
         </div>
 
@@ -188,7 +188,7 @@ export default function ServicesGrid() {
             Book Any Service · WhatsApp
           </a>
           <p className="mt-4 text-xs text-brand-navy/40 font-medium">
-            5.0 ★ Rating | 100+ Google Reviews · Kumaraswamy Layout, Bengaluru
+            Teeth polishing clinic near Kumaraswamy Layout, Bengaluru
           </p>
         </motion.div>
 

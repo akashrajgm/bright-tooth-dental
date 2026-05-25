@@ -38,8 +38,8 @@ export default function Footer() {
             </div>
 
             <p className="text-white/55 font-light text-sm md:text-base leading-relaxed max-w-md">
-              Nestled in Kumaraswamy Layout, Bengaluru — blending elite dental mastery with comfortable
-              clinical precision. Dr. Devika Hiremath & Dr. Shadakshari.
+              Nestled in Kumaraswamy Layout, Bengaluru — blending expert dental mastery with comfortable,
+              advanced clinical care. Dr. Devika Hiremath & Dr. Shadakshari.
             </p>
 
             {/* Contact items */}
@@ -63,9 +63,9 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="font-semibold text-white/90 mb-0.5">Operating Hours</div>
-                  <p className="text-white/55 text-xs md:text-sm">Monday – Saturday: 9:00 AM – 9:00 PM</p>
-                  <p className="text-white/55 text-xs md:text-sm mt-0.5">Sunday: 10:30 AM – 2:00 PM</p>
-                  <p className="text-[10px] text-[#FF6F91] font-bold uppercase tracking-wider mt-1">Open 7 Days (Sunday Half-Day)</p>
+                  <p className="text-white/55 text-xs md:text-sm">Mon–Sat: 9 AM – 9 PM</p>
+                  <p className="text-white/55 text-xs md:text-sm mt-0.5">Sunday: 10:30 AM – 2 PM</p>
+                  <p className="text-[10px] text-[#FF6F91] font-bold uppercase tracking-wider mt-1">Open All 7 Days</p>
                 </div>
               </div>
 
@@ -138,7 +138,7 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             <span className="flex items-center gap-1.5 text-[#FF6F91] font-medium">
               <Shield className="w-3.5 h-3.5" />
-              5.0 ★ Rating | 100+ Google Reviews
+              Kumaraswamy Layout, Bengaluru
             </span>
             <span>Managed by Dr. Devika & Dr. Shadakshari</span>
           </div>

@@ -9,7 +9,7 @@ const GALLERY_ITEMS = [
     title:       "Sleek Reception Lounge",
     desc:        "Designed for patient serenity. Modern marble contours and warm accents provide a relaxing atmosphere before your treatment.",
     gridClass:   "md:col-span-2 md:row-span-2 h-[480px]",
-    badge:       "Premium Comfort"
+    badge:       "Gentle Comfort"
   },
   {
     src:         "/treatment.png",
@@ -21,9 +21,9 @@ const GALLERY_ITEMS = [
   {
     src:         "/diagnostic.png",
     title:       "Advanced Diagnostic Bay",
-    desc:        "Empowered by precision. 3D CBCT imaging and ultra-low-radiation digital scanning for pin-point diagnosis.",
+    desc:        "Empowered by advanced tech. 3D CBCT imaging and ultra-low-radiation digital scanning for pin-point diagnosis.",
     gridClass:   "md:col-span-1 h-[230px]",
-    badge:       "Precision Tech"
+    badge:       "Advanced Diagnostics"
   }
 ];
 
@@ -53,15 +53,14 @@ export default function ClinicGallery() {
           
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-navy mb-5 leading-tight">
             A Glimpse into{" "}
-            <span className="italic font-normal gradient-text-raspberry">Elite Smile Design.</span>
+            <span className="italic font-normal gradient-text-raspberry">Your Dream Smile.</span>
           </h2>
 
           <p className="text-brand-navy/60 font-light leading-relaxed text-base md:text-lg">
             Step inside our ultra-modern, hygiene-forward dental studio in Bengaluru.
             <br />
-            <span className="inline-flex items-center gap-1.5 text-brand-raspberry font-semibold mt-2 bg-brand-rose border border-brand-raspberry/20 px-3 py-1 rounded-full text-xs">
-              <Star className="w-3.5 h-3.5 fill-brand-raspberry text-brand-raspberry" />
-              5.0 ★ Rating | 100+ Google Reviews
+            <span className="inline-flex items-center gap-1.5 text-brand-raspberry font-semibold mt-2 bg-brand-rose border border-[#FF6F91]/30 px-3 py-1 rounded-full text-xs">
+              Best dental clinic in Kumaraswamy Layout
             </span>
           </p>
         </div>

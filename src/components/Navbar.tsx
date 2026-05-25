@@ -19,8 +19,8 @@ function getClinicStatus() {
   const minutes = now.getMinutes();
   const time = hours * 60 + minutes;
 
-  // Monday to Saturday: 9:00 AM (540 mins) – 9:00 PM (1260 mins)
-  // Sunday: 10:30 AM (630 mins) – 2:00 PM (840 mins)
+  // Monday to Saturday: 9 AM (540 mins) – 9 PM (1260 mins)
+  // Sunday: 10:30 AM (630 mins) – 2 PM (840 mins)
   let isOpen = false;
   let statusText = "";
 
@@ -33,7 +33,7 @@ function getClinicStatus() {
       if (time < 630) {
         statusText = "Closed Now • Reserve for Today at 10:30 AM";
       } else {
-        statusText = "Closed Now • Reserve for Monday at 9:00 AM";
+        statusText = "Closed Now • Reserve for Monday at 9 AM";
       }
     }
   } else { // Monday to Saturday
@@ -43,12 +43,12 @@ function getClinicStatus() {
     } else {
       isOpen = false;
       if (time < 540) {
-        statusText = "Closed Now • Reserve for Today at 9:00 AM";
+        statusText = "Closed Now • Reserve for Today at 9 AM";
       } else {
         if (day === 6) { // Saturday night -> next is Sunday at 10:30 AM
           statusText = "Closed Now • Reserve for Sunday at 10:30 AM";
-        } else { // Monday - Friday night -> next is tomorrow at 9:00 AM
-          statusText = "Closed Now • Reserve for Tomorrow at 9:00 AM";
+        } else { // Monday - Friday night -> next is tomorrow at 9 AM
+          statusText = "Closed Now • Reserve for Tomorrow at 9 AM";
         }
       }
     }
@@ -227,8 +227,9 @@ export default function Navbar() {
               {/* Rating Badge */}
               <div className="mx-6 mt-2 flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-rose border border-brand-raspberry/15 w-fit">
                 <Star className="w-3.5 h-3.5 text-brand-raspberry fill-brand-raspberry" />
-                <span className="text-[10px] font-bold text-brand-raspberry">5.0 ★ Rating | 100+ Google Reviews</span>
+                <span className="text-[10px] font-bold text-brand-raspberry">Kumaraswamy Layout, Bengaluru</span>
               </div>
+
 
               {/* Nav Links */}
               <nav className="flex flex-col gap-1 px-4 mt-4 flex-1">

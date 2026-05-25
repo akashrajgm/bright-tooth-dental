@@ -3,9 +3,10 @@
 const ITEMS = [
   "Bright Tooth Multispeciality",
   "5.0 ★ Rating",
-  "100+ Google Reviews",
-  "Elite Smile Studio",
+  "Kumaraswamy Layout",
+  "Gentle Dental Studio",
 ];
+
 
 export default function CredibilityMarquee() {
   const doubled = [...ITEMS, ...ITEMS, ...ITEMS, ...ITEMS];

@@ -5,12 +5,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Bright Tooth Multispeciality Dental Care | 5.0 ★ Rated Clinic · Bengaluru",
   description:
-    "Premium, completely painless dental treatments by Dr. Devika Hiremath & Dr. Shadakshari. Rated 5.0 Stars with 100+ Google Reviews. Root Canals, Cosmetic Fillings, Teeth Restoration in Kumaraswamy Layout, Bengaluru.",
+    "Comfort-focused, gentle dental treatments by Dr. Devika Hiremath & Dr. Shadakshari. Rated 5.0 Stars with 100+ Google Reviews. Best dental clinic in Kumaraswamy Layout, Bengaluru.",
   keywords: [
-    "best dental clinic Bengaluru",
-    "painless dentist Kumaraswamy Layout",
-    "root canal treatment Bangalore",
-    "cosmetic dentistry Bengaluru",
+    "best dental clinic in Kumaraswamy Layout",
+    "root canal specialist in Bengaluru",
+    "cosmetic dentist in South Bengaluru",
+    "teeth polishing clinic near Kumaraswamy Layout",
     "Dr. Devika Hiremath dentist",
     "Dr. Shadakshari dentist",
     "Bright Tooth Dental Care",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bright Tooth Multispeciality Dental Care | Bengaluru",
     description:
-      "5.0 ★ Rated · 100+ Google Reviews · Painless dental artistry by Dr. Devika & Dr. Shadakshari, Kumaraswamy Layout, Bengaluru.",
+      "5.0 ★ Rated · 100+ Google Reviews · Comfort-focused dental care by Dr. Devika & Dr. Shadakshari, Kumaraswamy Layout, Bengaluru.",
     locale: "en_IN",
     type: "website",
   },

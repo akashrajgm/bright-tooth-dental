@@ -11,7 +11,7 @@ const SERVICES_LIST = [
   "Root Canal Therapy",
   "Laser Cavity Filling",
   "Teeth Polishing & Cleaning",
-  "Painless Tooth Extraction",
+  "Gentle Tooth Extraction",
   "Teeth Restoration & Crown",
   "Dental Consultation",
 ];
@@ -110,12 +110,12 @@ export default function WhatsAppBooking() {
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Reserve Your{" "}
-            <span className="italic font-normal gradient-text-raspberry">Premium Slot.</span>
+            <span className="italic font-normal gradient-text-raspberry">Preferred Slot.</span>
           </h2>
           <p className="text-white/55 font-light text-base max-w-xl mx-auto leading-relaxed">
             Book in seconds — your details are sent directly to our clinic via WhatsApp.
             <br />
-            <span className="text-[#FF6F91] font-semibold">5.0 ★ Rating | 100+ Google Reviews</span>
+            <span className="text-[#FF6F91] font-semibold">Designed for Patient Comfort</span>
           </p>
         </div>
 
@@ -294,8 +294,8 @@ export default function WhatsAppBooking() {
 
           {/* Trust footer */}
           <div className="mt-5 flex items-center justify-center gap-2 text-white/30 text-xs font-medium">
-            <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
-            5.0 ★ Rating | 100+ Google Reviews · Kumaraswamy Layout, Bengaluru
+            <Star className="w-3 h-3 text-brand-rose-mid fill-brand-rose-mid" />
+            Best dental clinic in Kumaraswamy Layout · Bengaluru
           </div>
         </div>
       </div>

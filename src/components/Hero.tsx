@@ -11,8 +11,8 @@ function getClinicStatus() {
   const minutes = now.getMinutes();
   const time = hours * 60 + minutes;
 
-  // Monday to Saturday: 9:00 AM (540 mins) – 9:00 PM (1260 mins)
-  // Sunday: 10:30 AM (630 mins) – 2:00 PM (840 mins)
+  // Monday to Saturday: 9 AM (540 mins) – 9 PM (1260 mins)
+  // Sunday: 10:30 AM (630 mins) – 2 PM (840 mins)
   let isOpen = false;
   let statusText = "";
 
@@ -25,7 +25,7 @@ function getClinicStatus() {
       if (time < 630) {
         statusText = "Closed Now • Reserve for Today at 10:30 AM";
       } else {
-        statusText = "Closed Now • Reserve for Monday at 9:00 AM";
+        statusText = "Closed Now • Reserve for Monday at 9 AM";
       }
     }
   } else { // Monday to Saturday
@@ -35,12 +35,12 @@ function getClinicStatus() {
     } else {
       isOpen = false;
       if (time < 540) {
-        statusText = "Closed Now • Reserve for Today at 9:00 AM";
+        statusText = "Closed Now • Reserve for Today at 9 AM";
       } else {
         if (day === 6) { // Saturday night -> next is Sunday at 10:30 AM
           statusText = "Closed Now • Reserve for Sunday at 10:30 AM";
-        } else { // Monday - Friday night -> next is tomorrow at 9:00 AM
-          statusText = "Closed Now • Reserve for Tomorrow at 9:00 AM";
+        } else { // Monday - Friday night -> next is tomorrow at 9 AM
+          statusText = "Closed Now • Reserve for Tomorrow at 9 AM";
         }
       }
     }
@@ -118,7 +118,7 @@ export default function Hero() {
             </span>
             <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold">
               <ShieldCheck className="w-3.5 h-3.5" />
-              100% Painless Procedures
+              Comfort-Focused Procedures
             </span>
           </motion.div>
 
@@ -138,7 +138,7 @@ export default function Hero() {
             variants={fadeUp}
             className="text-brand-navy/75 text-sm md:text-base font-light leading-relaxed max-w-2xl"
           >
-            Bright Tooth Multispeciality Dental Care is dedicated to creating lasting and bright smiles. The clinic&apos;s comprehensive approach focuses on preventive care, patient education, child education of brushing techniques, and long-term oral health strategies, empowering individuals to maintain healthy and beautiful smiles for years to come. It’s time for a dental checkup at Bright Tooth Multispeciality Dental Care—where a bright smile begins. Book now and let’s make your teeth sparkle! Call us at +91 78925 20522 to schedule your appointment.
+            Bright Tooth Multispeciality Dental Care is the best dental clinic in Kumaraswamy Layout, Bengaluru. Our clinic focuses on preventive care, patient education, child brushing techniques, and long-term oral health strategies. Whether you need a root canal specialist in Bengaluru or a cosmetic dentist in South Bengaluru, our gentle care team is dedicated to creating lasting smiles. Call us at +91 78925 20522 to schedule your appointment.
           </motion.p>
 
           {/* Stats Bar (updated to exact request) */}
@@ -148,9 +148,9 @@ export default function Hero() {
           >
             {[
               { v: "100+", l: "Google Reviews" },
-              { v: "5+ Years",  l: "Elite Excellence"  },
-              { v: "Completely", l: "Painless Procedures"  },
-              { v: "Open 7 Days", l: "Weekly Care"    },
+              { v: "5+ Years",  l: "Clinical Care"  },
+              { v: "Comfort", l: "Focused Care"  },
+              { v: "Open All 7 Days", l: "Weekly Care"    },
             ].map((s) => (
               <div key={s.l} className="flex flex-col">
                 <span className="font-serif text-xl sm:text-2xl font-bold text-brand-raspberry whitespace-nowrap">{s.v}</span>
