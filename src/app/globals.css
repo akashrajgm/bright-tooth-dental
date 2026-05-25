@@ -1,26 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* ── Charismatic Raspberry Palette ─────────────────────── */
+  --color-brand-white:      #FFFFFF;
+  --color-brand-rose:       #FFF0F2;
+  --color-brand-rose-mid:   #FFE0E6;
+  --color-brand-navy:       #2C3E50;
+  --color-brand-navy-light: #3D5166;
+  --color-brand-raspberry:  #D5006D;
+  --color-brand-coral:      #FF6F91;
+  --color-brand-coral-soft: #FFAFC0;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ── Legacy compatibility tokens ───────────────────────── */
+  --color-brand-teal:     #0D9488;
+  --color-brand-cyan:     #06B6D4;
+  --color-brand-walnut:   #2C3E50;
+  --color-brand-alabaster:#FFFFFF;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* ── Typography ────────────────────────────────────────── */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans:  "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* ── Animations ────────────────────────────────────────── */
+  --animate-marquee:         marquee 45s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 45s linear infinite;
+  --animate-float:           float 5s ease-in-out infinite;
+  --animate-pulse-soft:      pulse-soft 3s ease-in-out infinite;
+  --animate-spin-slow:       spin-slow 20s linear infinite;
+
+  @keyframes marquee {
+    0%   { transform: translateX(0%);   }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0%);   }
+  }
+  @keyframes float {
+    0%,100% { transform: translateY(0px);    }
+    50%      { transform: translateY(-16px);  }
+  }
+  @keyframes pulse-soft {
+    0%,100% { opacity: 0.6; transform: scale(1);    }
+    50%      { opacity: 1;   transform: scale(1.06); }
+  }
+  @keyframes spin-slow {
+    from { transform: rotate(0deg);   }
+    to   { transform: rotate(360deg); }
+  }
+  @keyframes reveal-up {
+    from { opacity: 0; transform: translateY(48px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0)    scale(1);    }
+  }
+  @keyframes slide-left {
+    from { opacity: 0; transform: translateX(-56px); }
+    to   { opacity: 1; transform: translateX(0);     }
+  }
+  @keyframes slide-right {
+    from { opacity: 0; transform: translateX(56px); }
+    to   { opacity: 1; transform: translateX(0);    }
   }
 }
 
+/* ── Base Reset ────────────────────────────────────────────── */
+:root {
+  --raspberry-glow: 0 0 32px rgba(213, 0, 109, 0.30), 0 0 64px rgba(213, 0, 109, 0.15);
+  --coral-glow:     0 0 24px rgba(255, 111, 145, 0.35);
+  --card-shadow:    0 8px 48px rgba(0, 0, 0, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #FFFFFF;
+  color: #2C3E50;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background: #FFFFFF;
+  color: #2C3E50;
+  letter-spacing: 0em; /* tracking-normal default */
+}
+
+/* ── Typography Pairing & Tracking Rules ─────────────────── */
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0.025em; /* tracking-wide heading style */
+}
+
+p, blockquote, label, input, button, select, textarea, .font-sans {
+  font-family: var(--font-sans);
+  letter-spacing: 0em; /* tracking-normal description/controls */
+}
+
+/* ── Premium Scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar        { width: 8px; }
+::-webkit-scrollbar-track  { background: #FFF0F2; }
+::-webkit-scrollbar-thumb  { background: #D5006D; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #FF6F91; }
+
+/* ── Glassmorphic Navbar ────────────────────────────────────── */
+.glass-nav {
+  background: rgba(14, 22, 34, 0.4);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Service Card Hover Glow ────────────────────────────────── */
+.raspberry-hover {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease;
+}
+.raspberry-hover:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(213, 0, 109, 0.24), 0 0 0 2px #D5006D;
+}
+
+/* ── Raspberry Gradient Text ────────────────────────────────── */
+.gradient-text-raspberry {
+  background: linear-gradient(135deg, #D5006D 0%, #FF6F91 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Center-Out Nav Underline ───────────────────────────────── */
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #D5006D;
+  transition: width 0.35s cubic-bezier(0.25, 1, 0.5, 1), left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 4px;
+}
+.nav-link-underline:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ── Button Glow & Hover Gradient Shift ─────────────────────── */
+.btn-raspberry {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #D5006D 0%, #FF6F91 100%);
+  box-shadow: 0 4px 20px rgba(213, 0, 109, 0.30);
+  transition: box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.btn-raspberry::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #FF6F91 0%, #D5006D 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.btn-raspberry:hover::before {
+  opacity: 1;
+}
+.btn-raspberry:hover {
+  box-shadow: 0 6px 32px rgba(213, 0, 109, 0.45);
+  transform: translateY(-2px) scale(1.05);
+}
+.btn-raspberry:active {
+  transform: scale(0.97);
+}
+
+/* ── Doctor Card ────────────────────────────────────────────── */
+.doctor-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 8px 48px rgba(44, 62, 80, 0.06);
+  overflow: hidden;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+.doctor-card:hover {
+  box-shadow: 0 16px 64px rgba(213, 0, 109, 0.12);
+  transform: translateY(-8px);
+}
+
+/* ── Surface Card ───────────────────────────────────────────── */
+.surface-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(44, 62, 80, 0.06);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.03);
+  transition: all 0.3s ease;
+}
+
+/* ── Rose Surface (Midnight separation block) ──────────────── */
+.surface-rose {
+  background: rgba(21, 31, 50, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+/* ── Scroll-Driven Reveal ───────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    .scroll-reveal {
+      animation: reveal-up auto linear forwards;
+      animation-timeline: view();
+      animation-range: entry 5% cover 35%;
+    }
+  }
 }
