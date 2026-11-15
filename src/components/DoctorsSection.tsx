@@ -12,8 +12,8 @@ const DOCTORS = [
     credentials:"BDS – Cosmetic & Restorative Dentistry",
     specialties:["Aesthetic Dentistry", "Restorative Smiles", "Laser Fillings", "Teeth Polishing"],
     quote:      "\"Your comfort and confidence are the foundation of everything I do. A comfortable, beautiful smile is not a luxury — it is your right.\"",
-    avatarGrad: "from-[#FF6F91] via-[#D5006D] to-[#8B005D]",
-    accentColor:"#D5006D",
+    avatarGrad: "from-[#7AB2B1] via-[#088395] to-[#09637E]",
+    accentColor:"#09637E",
     slideFrom:  -70,
     image:      "/dr_devika.png",
   },
@@ -25,8 +25,8 @@ const DOCTORS = [
     credentials:"BDS, MDS – Oral & Maxillofacial Surgery",
     specialties:["Root Canal Therapy", "Dental Implants", "Oral Surgery", "Extractions"],
     quote:      "\"Precision, patience, and empathy — these are the cornerstones of exceptional dental care that truly transforms lives.\"",
-    avatarGrad: "from-[#3D5166] via-[#2C3E50] to-[#1a2530]",
-    accentColor:"#2C3E50",
+    avatarGrad: "from-[#088395] via-[#09637E] to-[#0A2533]",
+    accentColor:"#088395",
     slideFrom:  70,
     image:      "/dr_shadakshari.jpg",
   },
@@ -34,22 +34,22 @@ const DOCTORS = [
 
 export default function DoctorsSection() {
   return (
-    <section id="doctors" className="py-28 relative overflow-hidden" style={{ background: "#FFF0F2" }}>
+    <section id="doctors" className="py-28 relative overflow-hidden" style={{ background: "#EBF5F7" }}>
 
       {/* ── Background accents ──────────────────────────────── */}
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute top-0 right-0 w-[40%] h-[50%]"
-          style={{ background: "radial-gradient(ellipse at 90% 10%, rgba(213,0,109,0.1) 0%, transparent 65%)" }}
+          style={{ background: "radial-gradient(ellipse at 90% 10%, rgba(9,99,126,0.08) 0%, transparent 65%)" }}
         />
         <div
           className="absolute bottom-0 left-0 w-[35%] h-[40%]"
-          style={{ background: "radial-gradient(ellipse at 10% 90%, rgba(255,111,145,0.08) 0%, transparent 65%)" }}
+          style={{ background: "radial-gradient(ellipse at 10% 90%, rgba(8,131,149,0.06) 0%, transparent 65%)" }}
         />
         {/* Decorative dot grid */}
         <div
-          className="absolute bottom-12 right-8 w-32 h-48 opacity-[0.04]"
-          style={{ backgroundImage: "radial-gradient(circle, #D5006D 1px, transparent 1px)", backgroundSize: "16px 16px" }}
+          className="absolute bottom-12 right-8 w-32 h-48 opacity-[0.05]"
+          style={{ backgroundImage: "radial-gradient(circle, #09637E 1px, transparent 1px)", backgroundSize: "16px 16px" }}
         />
       </div>
 
@@ -62,9 +62,9 @@ export default function DoctorsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-raspberry mb-4 bg-brand-rose-mid px-4 py-1.5 rounded-full border border-brand-raspberry/20"
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#09637E] mb-4 bg-white px-4 py-1.5 rounded-full border border-[#7AB2B1]/40 shadow-sm"
           >
-            <Star className="w-3.5 h-3.5 fill-brand-raspberry text-brand-raspberry" />
+            <Star className="w-3.5 h-3.5 fill-[#09637E] text-[#09637E]" />
             Meet Our Dedicated Care Team
           </motion.span>
 
@@ -76,7 +76,7 @@ export default function DoctorsSection() {
             className="font-serif text-4xl md:text-5xl font-bold text-brand-navy mb-5 leading-tight"
           >
             Excellence Meets{" "}
-            <span className="italic font-normal gradient-text-raspberry">Compassion.</span>
+            <span className="italic font-normal gradient-text-teal">Compassion.</span>
           </motion.h2>
 
           <motion.p
@@ -84,7 +84,7 @@ export default function DoctorsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.18 }}
-            className="text-brand-navy/60 font-light leading-relaxed text-base md:text-lg"
+            className="text-brand-navy/70 font-light leading-relaxed text-base md:text-lg"
           >
             Two extraordinary specialists who have built Bright Tooth&apos;s
             reputation for gentle, comfort-focused dental care.
@@ -102,7 +102,7 @@ export default function DoctorsSection() {
               whileHover={{ y: -8, scale: 1.02 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ type: "spring", stiffness: 65, damping: 18, delay: i * 0.12 }}
-              className="doctor-card flex-1 max-w-[460px] w-full mx-auto lg:mx-0 flex flex-col justify-between border border-transparent hover:border-[#FF6F91] hover:shadow-[0_20px_40px_-15px_rgba(213,0,109,0.15)] transition-all duration-300"
+              className="doctor-card flex-1 max-w-[460px] w-full mx-auto lg:mx-0 flex flex-col justify-between border border-transparent hover:border-[#7AB2B1] hover:shadow-[0_20px_40px_-15px_rgba(9,99,126,0.18)] transition-all duration-300"
             >
               {/* ── Portrait Area (explicit 460×620 on lg or aspect-3/4) ── */}
               <div
@@ -161,7 +161,7 @@ export default function DoctorsSection() {
                   className="absolute bottom-0 left-0 right-0 h-40"
                   style={{
                     background:
-                      "linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%)",
+                      "linear-gradient(to top, rgba(10,37,51,0.5) 0%, transparent 100%)",
                   }}
                 />
               </div>
@@ -182,13 +182,13 @@ export default function DoctorsSection() {
                 </div>
 
                 {/* Credentials */}
-                <div className="flex items-center gap-2 text-brand-navy/50 text-xs font-medium">
+                <div className="flex items-center gap-2 text-brand-navy/60 text-xs font-medium">
                   <GraduationCap className="w-4 h-4 flex-shrink-0" />
                   {doc.credentials}
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-brand-navy/60 text-sm font-light italic leading-relaxed border-l-2 border-brand-raspberry/40 pl-4">
+                <blockquote className="text-brand-navy/70 text-sm font-light italic leading-relaxed border-l-2 border-[#09637E]/40 pl-4">
                   {doc.quote}
                 </blockquote>
 
@@ -197,7 +197,7 @@ export default function DoctorsSection() {
                   {doc.specialties.map((s) => (
                     <span
                       key={s}
-                      className="px-3 py-1 rounded-full text-xs font-semibold bg-brand-rose border border-brand-raspberry/15 text-brand-raspberry"
+                      className="px-3 py-1 rounded-full text-xs font-semibold bg-[#EBF5F7] border border-[#7AB2B1]/40 text-[#09637E]"
                     >
                       {s}
                     </span>
@@ -234,9 +234,9 @@ export default function DoctorsSection() {
           ].map((item, index) => (
             <div
               key={`${item}-${index}`}
-              className="w-full min-w-[260px] text-center flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#2C3E50]/[0.04] border border-[#2C3E50]/[0.08] font-sans text-sm text-[#2C3E50] shadow-sm font-medium"
+              className="w-full min-w-[260px] text-center flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white border border-[#7AB2B1]/30 font-sans text-sm text-[#0A2533] shadow-sm font-medium"
             >
-              <Award className="w-4 h-4 text-brand-raspberry flex-shrink-0" />
+              <Award className="w-4 h-4 text-[#09637E] flex-shrink-0" />
               <span>{item}</span>
             </div>
           ))}
@@ -246,4 +246,3 @@ export default function DoctorsSection() {
     </section>
   );
 }
-

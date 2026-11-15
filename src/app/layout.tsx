@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://brighttoothdental.com"),
   title: "Bright Tooth Multispeciality Dental Care | 5.0 ★ Rated Clinic · Bengaluru",
   description:
     "Comfort-focused, gentle dental treatments by Dr. Devika Hiremath & Dr. Shadakshari. Rated 5.0 Stars with 100+ Google Reviews. Best dental clinic in Kumaraswamy Layout, Bengaluru.",
@@ -21,6 +22,26 @@ export const metadata: Metadata = {
       "5.0 ★ Rated · 100+ Google Reviews · Comfort-focused dental care by Dr. Devika & Dr. Shadakshari, Kumaraswamy Layout, Bengaluru.",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/logo-full.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bright Tooth Multispeciality Dental Care Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bright Tooth Multispeciality Dental Care | Bengaluru",
+    description:
+      "5.0 ★ Rated · 100+ Google Reviews · Comfort-focused dental care by Dr. Devika & Dr. Shadakshari, Kumaraswamy Layout, Bengaluru.",
+    images: ["/logo-full.jpg"],
+  },
+  icons: {
+    icon: "/logo-emblem.jpg",
+    shortcut: "/logo-emblem.jpg",
+    apple: "/logo-emblem.jpg",
   },
 };
 
@@ -30,6 +51,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="icon" type="image/jpeg" href="/logo-emblem.jpg" />
+        <link rel="apple-touch-icon" href="/logo-emblem.jpg" />
         {/* SW Killswitch — removes any stale SvelteKit service worker */}
         <Script
           id="sw-unregister"

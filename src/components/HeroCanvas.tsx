@@ -73,7 +73,7 @@ function GlassSphereCluster() {
     () =>
       new THREE.MeshPhysicalMaterial({
         color:              new THREE.Color("#ffffff"),
-        emissive:           new THREE.Color("#FFE0E6"),
+        emissive:           new THREE.Color("#EBF5F7"),
         emissiveIntensity:  0.05,
         roughness:          0.1, // Smooth roughness
         metalness:          0.05,
@@ -93,12 +93,12 @@ function GlassSphereCluster() {
   const satinMat = useMemo(
     () =>
       new THREE.MeshPhysicalMaterial({
-        color:              new THREE.Color("#FF6F91"), // Vibrant coral/rose sheen
+        color:              new THREE.Color("#088395"), // Vibrant ocean teal sheen
         roughness:          0.35, // Soft satin reflection
         metalness:          0.25, // Slight metallic density
         clearcoat:          0.5,
         clearcoatRoughness: 0.3,
-        emissive:           new THREE.Color("#D5006D"),
+        emissive:           new THREE.Color("#09637E"),
         emissiveIntensity:  0.15,
       }),
     []
@@ -113,12 +113,12 @@ function GlassSphereCluster() {
           <sphereGeometry args={[1.7, 64, 64]} />
         </mesh>
 
-        {/* Inner Glowing Raspberry Core */}
+        {/* Inner Glowing Deep Teal Core */}
         <mesh ref={innerRef}>
           <sphereGeometry args={[0.55, 32, 32]} />
           <meshStandardMaterial
-            color="#D5006D"
-            emissive="#D5006D"
+            color="#09637E"
+            emissive="#09637E"
             emissiveIntensity={1.4}
             roughness={0.2}
             transparent
@@ -152,8 +152,8 @@ function Lights() {
     <>
       <ambientLight intensity={0.7} color="#fff0f2" />
       <directionalLight position={[6, 12, 10]}  intensity={2.2} color="#ffffff" />
-      <directionalLight position={[-8, -6, -6]} intensity={0.8} color="#FF6F91" />
-      <pointLight       position={[0, 0, 0]}    intensity={3.5} color="#D5006D" distance={6} decay={2} />
+      <directionalLight position={[-8, -6, -6]} intensity={0.8} color="#088395" />
+      <pointLight       position={[0, 0, 0]}    intensity={3.5} color="#09637E" distance={6} decay={2} />
       <pointLight       position={[5, 5, 5]}    intensity={1.2} color="#ffffff" />
     </>
   );
@@ -167,18 +167,18 @@ export default function HeroCanvas() {
   if (!ready)
     return (
       <div className="w-full flex items-center justify-center" style={{ height: 480 }}>
-        <div className="w-14 h-14 rounded-full border-2 border-brand-raspberry/30 border-t-brand-raspberry animate-spin" />
+        <div className="w-14 h-14 rounded-full border-2 border-[#09637E]/30 border-t-[#09637E] animate-spin" />
       </div>
     );
 
   return (
     <div className="w-full relative" style={{ height: 480 }}>
-      {/* Ambient raspberry bloom behind canvas */}
+      {/* Ambient teal bloom behind canvas */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(213,0,109,0.12) 0%, transparent 65%)",
+            "radial-gradient(ellipse at center, rgba(9,99,126,0.12) 0%, transparent 65%)",
         }}
       />
       <Canvas

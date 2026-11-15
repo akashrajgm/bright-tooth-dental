@@ -1,16 +1,15 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
-const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
-const CredibilityMarquee = dynamic(() => import("@/components/CredibilityMarquee"), { ssr: false });
-const DoctorsSection = dynamic(() => import("@/components/DoctorsSection"), { ssr: false });
-const ServicesGrid = dynamic(() => import("@/components/ServicesGrid"), { ssr: false });
-const ClinicGallery = dynamic(() => import("@/components/ClinicGallery"), { ssr: false });
-const WallOfTrust = dynamic(() => import("@/components/WallOfTrust"), { ssr: false });
-const WhatsAppBooking = dynamic(() => import("@/components/WhatsAppBooking"), { ssr: false });
-const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import CredibilityMarquee from "@/components/CredibilityMarquee";
+import DoctorsSection from "@/components/DoctorsSection";
+import ServicesGrid from "@/components/ServicesGrid";
+import ClinicGallery from "@/components/ClinicGallery";
+import WallOfTrust from "@/components/WallOfTrust";
+import WhatsAppBooking from "@/components/WhatsAppBooking";
+import Footer from "@/components/Footer";
+import StickyMobileBar from "@/components/StickyMobileBar";
 
 export default function Home() {
   return (
@@ -18,14 +17,14 @@ export default function Home() {
       {/* Sticky Two-Tier Navigation */}
       <Navbar />
 
-      <main className="flex-grow pt-[84px] sm:pt-[76px]">
+      <main className="flex-grow pt-[84px] sm:pt-[76px] pb-20 lg:pb-0">
         {/* 1. Hero — Pure White · Interactive Bento Stack */}
         <Hero />
 
-        {/* 2. Credibility Ticker Strip — Deep Navy */}
+        {/* 2. Credibility Ticker Strip — Deep Teal Strip */}
         <CredibilityMarquee />
 
-        {/* 3. Meet Our Doctors — Soft Tinted Rose #FFF0F2 */}
+        {/* 3. Meet Our Doctors — Ice Blue #EBF5F7 */}
         <DoctorsSection />
 
         {/* 4. Specialized Services — Pure White */}
@@ -34,15 +33,18 @@ export default function Home() {
         {/* 5. Immersive Clinic Gallery — Pure White */}
         <ClinicGallery />
 
-        {/* 6. Wall of Trust — Infinite Review Marquee — Soft Rose */}
+        {/* 6. Wall of Trust — Infinite Review Marquee — Ice Blue #EBF5F7 */}
         <WallOfTrust />
 
-        {/* 7. WhatsApp Appointment Scheduler — Dark Glass */}
+        {/* 7. WhatsApp Appointment Scheduler — Deep Teal Dark Glass */}
         <WhatsAppBooking />
       </main>
 
-      {/* 8. Footer — Location & Contact · Deep Navy */}
+      {/* 8. Footer — Location & Contact · Deep Teal-Navy */}
       <Footer />
+
+      {/* 9. Sticky Mobile Conversion Bar (iOS & Android) */}
+      <StickyMobileBar />
     </div>
   );
 }

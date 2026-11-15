@@ -2,74 +2,11 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Star, ShieldCheck } from "lucide-react";
-import { useEffect, useState } from "react";
-
-function getClinicStatus() {
-  const now = new Date();
-  const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-  const time = hours * 60 + minutes;
-
-  // Monday to Saturday: 9 AM (540 mins) – 9 PM (1260 mins)
-  // Sunday: 10:30 AM (630 mins) – 2 PM (840 mins)
-  let isOpen = false;
-  let statusText = "";
-
-  if (day === 0) { // Sunday
-    if (time >= 630 && time < 840) {
-      isOpen = true;
-      statusText = "Open Now • Drop In or Call";
-    } else {
-      isOpen = false;
-      if (time < 630) {
-        statusText = "Closed Now • Reserve for Today at 10:30 AM";
-      } else {
-        statusText = "Closed Now • Reserve for Monday at 9 AM";
-      }
-    }
-  } else { // Monday to Saturday
-    if (time >= 540 && time < 1260) {
-      isOpen = true;
-      statusText = "Open Now • Drop In or Call";
-    } else {
-      isOpen = false;
-      if (time < 540) {
-        statusText = "Closed Now • Reserve for Today at 9 AM";
-      } else {
-        if (day === 6) { // Saturday night -> next is Sunday at 10:30 AM
-          statusText = "Closed Now • Reserve for Sunday at 10:30 AM";
-        } else { // Monday - Friday night -> next is tomorrow at 9 AM
-          statusText = "Closed Now • Reserve for Tomorrow at 9 AM";
-        }
-      }
-    }
-  }
-
-  return { isOpen, statusText };
-}
 
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
 const fadeUp  = { hidden: { opacity: 0, y: 32 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } } };
 
 export default function Hero() {
-  const [status, setStatus] = useState<{ isOpen: boolean; statusText: string }>({
-    isOpen: false,
-    statusText: "Checking clinic hours...",
-  });
-
-  useEffect(() => {
-    setStatus(getClinicStatus());
-
-    const interval = setInterval(() => {
-      setStatus(getClinicStatus());
-    }, 60000);
-    
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
   return (
     <section
       id="home"
@@ -81,21 +18,21 @@ export default function Hero() {
           className="absolute top-0 right-0 w-[55%] h-[65%]"
           style={{
             background:
-              "radial-gradient(ellipse at 80% 20%, rgba(255,111,145,0.12) 0%, rgba(213,0,109,0.06) 40%, transparent 70%)",
+              "radial-gradient(ellipse at 80% 20%, rgba(8,131,149,0.12) 0%, rgba(9,99,126,0.06) 40%, transparent 70%)",
           }}
         />
         <div
           className="absolute bottom-0 left-0 w-[40%] h-[40%]"
           style={{
             background:
-              "radial-gradient(ellipse at 20% 80%, rgba(255,240,242,0.9) 0%, transparent 70%)",
+              "radial-gradient(ellipse at 20% 80%, rgba(235,245,247,0.9) 0%, transparent 70%)",
           }}
         />
         <div
           className="absolute top-24 left-6 w-40 h-40 opacity-[0.06]"
           style={{
             backgroundImage:
-              "radial-gradient(circle, #D5006D 1px, transparent 1px)",
+              "radial-gradient(circle, #09637E 1px, transparent 1px)",
             backgroundSize: "18px 18px",
           }}
         />
@@ -112,8 +49,8 @@ export default function Hero() {
         >
           {/* Trust badge */}
           <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
-            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-brand-rose border border-brand-raspberry/15 text-brand-raspberry text-xs font-bold uppercase tracking-wider">
-              <Star className="w-3.5 h-3.5 fill-brand-raspberry" />
+            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#EBF5F7] border border-[#7AB2B1]/30 text-[#09637E] text-xs font-bold uppercase tracking-wider">
+              <Star className="w-3.5 h-3.5 fill-[#09637E] text-[#09637E]" />
               5.0 ★ Rating | 100+ Google Reviews
             </span>
             <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold">
@@ -128,7 +65,7 @@ export default function Hero() {
             className="font-serif text-5xl md:text-6xl font-bold text-brand-navy leading-[1.07] tracking-tight"
           >
             Where a{" "}
-            <span className="block mt-1 italic font-normal gradient-text-raspberry">
+            <span className="block mt-1 italic font-normal gradient-text-teal">
               Bright Smile Begins.
             </span>
           </motion.h1>
@@ -153,7 +90,7 @@ export default function Hero() {
               { v: "Open All 7 Days", l: "Weekly Care"    },
             ].map((s) => (
               <div key={s.l} className="flex flex-col">
-                <span className="font-serif text-xl sm:text-2xl font-bold text-brand-raspberry whitespace-nowrap">{s.v}</span>
+                <span className="font-serif text-xl sm:text-2xl font-bold text-[#09637E] whitespace-nowrap">{s.v}</span>
                 <span className="text-[10px] font-bold text-brand-navy/55 uppercase tracking-wider mt-0.5 leading-tight">{s.l}</span>
               </div>
             ))}
@@ -163,14 +100,14 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3">
             <a
               href="#booking"
-              className="btn-raspberry px-8 py-4 rounded-full text-white font-bold flex items-center justify-center gap-2 group flex-1 sm:flex-initial"
+              className="btn-teal px-8 py-4 rounded-full text-white font-bold flex items-center justify-center gap-2 group flex-1 sm:flex-initial"
             >
               Reserve a Slot
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="tel:+917892520522"
-              className="px-8 py-4 rounded-full border-2 border-brand-raspberry/25 text-brand-raspberry font-bold text-center hover:bg-brand-rose transition-all duration-300 flex items-center justify-center gap-2 flex-1 sm:flex-initial"
+              className="px-8 py-4 rounded-full border-2 border-[#09637E]/30 text-[#09637E] font-bold text-center hover:bg-[#EBF5F7] transition-all duration-300 flex items-center justify-center gap-2 flex-1 sm:flex-initial"
             >
               Call +91 78925 20522
             </a>
@@ -183,7 +120,7 @@ export default function Hero() {
           <div
             className="absolute inset-0 pointer-events-none blur-3xl opacity-60 bg-radial"
             style={{
-              background: "radial-gradient(circle, rgba(255,111,145,0.2) 0%, rgba(213,0,109,0.05) 50%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(8,131,149,0.2) 0%, rgba(9,99,126,0.05) 50%, transparent 70%)",
             }}
           />
 
@@ -192,7 +129,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative w-full max-w-[340px] sm:max-w-[380px] aspect-[4/5] z-10 rounded-3xl overflow-hidden shadow-2xl border border-brand-rose-mid/30 bg-white"
+            className="relative w-full max-w-[340px] sm:max-w-[380px] aspect-[4/5] z-10 rounded-3xl overflow-hidden shadow-2xl border border-[#7AB2B1]/30 bg-white"
           >
             <video
               src="/3d_component.mp4"
@@ -209,7 +146,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom fade into CredibilityMarquee */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-[#2C3E50] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-[#09637E] pointer-events-none" />
     </section>
   );
 }

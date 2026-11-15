@@ -2,21 +2,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Charismatic Raspberry Palette ─────────────────────── */
-  --color-brand-white:      #FFFFFF;
-  --color-brand-rose:       #FFF0F2;
-  --color-brand-rose-mid:   #FFE0E6;
-  --color-brand-navy:       #2C3E50;
-  --color-brand-navy-light: #3D5166;
-  --color-brand-raspberry:  #D5006D;
-  --color-brand-coral:      #FF6F91;
-  --color-brand-coral-soft: #FFAFC0;
+  /* ── New Brand Palette ──────────────────────────────────── */
+  --color-brand-primary:      #09637E; /* Primary Deep Teal */
+  --color-brand-secondary:    #088395; /* Secondary Ocean Teal */
+  --color-brand-accent:       #7AB2B1; /* Supporting Muted Aqua */
+  --color-brand-bg-light:     #EBF5F7; /* Light Background Ice Blue */
+  --color-brand-white:        #FFFFFF;
+  --color-brand-navy:         #0A2533; /* Deep Teal-Navy text */
+  --color-brand-navy-light:   #183B4B;
 
-  /* ── Legacy compatibility tokens ───────────────────────── */
-  --color-brand-teal:     #0D9488;
-  --color-brand-cyan:     #06B6D4;
-  --color-brand-walnut:   #2C3E50;
-  --color-brand-alabaster:#FFFFFF;
+  /* ── Exact Named Brand Tokens ───────────────────────────── */
+  --color-brand-deep-teal:    #09637E;
+  --color-brand-ocean-teal:   #088395;
+  --color-brand-muted-aqua:   #7AB2B1;
+  --color-brand-ice-blue:     #EBF5F7;
+
+  /* ── Aliases for seamless component compatibility ───────── */
+  --color-brand-raspberry:    #09637E; /* Deep Teal */
+  --color-brand-coral:        #088395; /* Ocean Teal */
+  --color-brand-coral-soft:   #7AB2B1; /* Muted Aqua */
+  --color-brand-rose:         #EBF5F7; /* Ice Blue */
+  --color-brand-rose-mid:     #D2E9ED; /* Soft border tint */
+
+  /* ── Legacy tokens mapped cleanly ───────────────────────── */
+  --color-brand-teal:         #09637E;
+  --color-brand-cyan:         #088395;
+  --color-brand-walnut:       #0A2533;
+  --color-brand-alabaster:    #FFFFFF;
 
   /* ── Typography ────────────────────────────────────────── */
   --font-serif: "Playfair Display", Georgia, serif;
@@ -65,15 +77,17 @@
 
 /* ── Base Reset ────────────────────────────────────────────── */
 :root {
-  --raspberry-glow: 0 0 32px rgba(213, 0, 109, 0.30), 0 0 64px rgba(213, 0, 109, 0.15);
-  --coral-glow:     0 0 24px rgba(255, 111, 145, 0.35);
-  --card-shadow:    0 8px 48px rgba(0, 0, 0, 0.3);
+  --teal-glow:      0 0 32px rgba(9, 99, 126, 0.30), 0 0 64px rgba(8, 131, 149, 0.15);
+  --aqua-glow:      0 0 24px rgba(122, 178, 177, 0.35);
+  --raspberry-glow: 0 0 32px rgba(9, 99, 126, 0.30), 0 0 64px rgba(8, 131, 149, 0.15);
+  --coral-glow:     0 0 24px rgba(122, 178, 177, 0.35);
+  --card-shadow:    0 8px 48px rgba(9, 99, 126, 0.08);
 }
 
 html {
   scroll-behavior: smooth;
   background: #FFFFFF;
-  color: #2C3E50;
+  color: #0A2533;
 }
 
 body {
@@ -82,7 +96,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background: #FFFFFF;
-  color: #2C3E50;
+  color: #0A2533;
   letter-spacing: 0em; /* tracking-normal default */
 }
 
@@ -99,32 +113,35 @@ p, blockquote, label, input, button, select, textarea, .font-sans {
 
 /* ── Premium Scrollbar ──────────────────────────────────────── */
 ::-webkit-scrollbar        { width: 8px; }
-::-webkit-scrollbar-track  { background: #FFF0F2; }
-::-webkit-scrollbar-thumb  { background: #D5006D; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #FF6F91; }
+::-webkit-scrollbar-track  { background: #EBF5F7; }
+::-webkit-scrollbar-thumb  { background: #09637E; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #088395; }
 
 /* ── Glassmorphic Navbar ────────────────────────────────────── */
 .glass-nav {
-  background: rgba(14, 22, 34, 0.4);
+  background: rgba(9, 99, 126, 0.4);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 32px rgba(9, 99, 126, 0.15);
 }
 
 /* ── Service Card Hover Glow ────────────────────────────────── */
+.teal-hover,
 .raspberry-hover {
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
               box-shadow 0.35s ease;
 }
+.teal-hover:hover,
 .raspberry-hover:hover {
   transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 12px 40px rgba(213, 0, 109, 0.24), 0 0 0 2px #D5006D;
+  box-shadow: 0 12px 40px rgba(9, 99, 126, 0.20), 0 0 0 2px #09637E;
 }
 
-/* ── Raspberry Gradient Text ────────────────────────────────── */
+/* ── Teal Gradient Text ─────────────────────────────────────── */
+.gradient-text-teal,
 .gradient-text-raspberry {
-  background: linear-gradient(135deg, #D5006D 0%, #FF6F91 100%);
+  background: linear-gradient(135deg, #09637E 0%, #088395 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -141,7 +158,7 @@ p, blockquote, label, input, button, select, textarea, .font-sans {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #D5006D;
+  background-color: #088395;
   transition: width 0.35s cubic-bezier(0.25, 1, 0.5, 1), left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
   border-radius: 4px;
 }
@@ -151,30 +168,35 @@ p, blockquote, label, input, button, select, textarea, .font-sans {
 }
 
 /* ── Button Glow & Hover Gradient Shift ─────────────────────── */
+.btn-teal,
 .btn-raspberry {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  background: linear-gradient(135deg, #D5006D 0%, #FF6F91 100%);
-  box-shadow: 0 4px 20px rgba(213, 0, 109, 0.30);
+  background: linear-gradient(135deg, #09637E 0%, #088395 100%);
+  box-shadow: 0 4px 20px rgba(9, 99, 126, 0.28);
   transition: box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+.btn-teal::before,
 .btn-raspberry::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #FF6F91 0%, #D5006D 100%);
+  background: linear-gradient(135deg, #088395 0%, #09637E 100%);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
+.btn-teal:hover::before,
 .btn-raspberry:hover::before {
   opacity: 1;
 }
+.btn-teal:hover,
 .btn-raspberry:hover {
-  box-shadow: 0 6px 32px rgba(213, 0, 109, 0.45);
+  box-shadow: 0 6px 32px rgba(9, 99, 126, 0.40);
   transform: translateY(-2px) scale(1.05);
 }
+.btn-teal:active,
 .btn-raspberry:active {
   transform: scale(0.97);
 }
@@ -183,28 +205,29 @@ p, blockquote, label, input, button, select, textarea, .font-sans {
 .doctor-card {
   background: #FFFFFF;
   border-radius: 24px;
-  box-shadow: 0 8px 48px rgba(44, 62, 80, 0.06);
+  box-shadow: 0 8px 48px rgba(9, 99, 126, 0.06);
   overflow: hidden;
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 .doctor-card:hover {
-  box-shadow: 0 16px 64px rgba(213, 0, 109, 0.12);
+  box-shadow: 0 16px 64px rgba(9, 99, 126, 0.16);
   transform: translateY(-8px);
 }
 
 /* ── Surface Card ───────────────────────────────────────────── */
 .surface-card {
   background: #FFFFFF;
-  border: 1px solid rgba(44, 62, 80, 0.06);
+  border: 1px solid rgba(122, 178, 177, 0.2);
   border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.03);
+  box-shadow: 0 8px 32px rgba(9, 99, 126, 0.04);
   transition: all 0.3s ease;
 }
 
-/* ── Rose Surface (Midnight separation block) ──────────────── */
-.surface-rose {
-  background: rgba(21, 31, 50, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+/* ── Ice Blue Surface ───────────────────────────────────────── */
+.surface-rose,
+.surface-ice {
+  background: #EBF5F7;
+  border: 1px solid rgba(122, 178, 177, 0.25);
   border-radius: 20px;
 }
 

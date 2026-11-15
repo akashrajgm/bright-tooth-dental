@@ -3,7 +3,7 @@
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', async () => {
   // Unregister ALL service workers for this origin
-  const registrations = await self.registration.unregister();
+  await self.registration.unregister();
 
   // Delete every cache entry
   const cacheNames = await caches.keys();
