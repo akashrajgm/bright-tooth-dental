@@ -81,7 +81,11 @@ export default function WhatsAppBooking() {
     setSubmitted(true);
 
     setTimeout(() => {
-      window.open(`https://api.whatsapp.com/send?phone=917892520522&text=${message}`, "_blank");
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=917892520522&text=${message}`;
+      const win = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      if (win) {
+        win.opener = null;
+      }
       setSubmitting(false);
     }, 900);
   }, [isValid, submitting, name, service, selectedDay, selectedTime, days]);
@@ -136,7 +140,11 @@ export default function WhatsAppBooking() {
                   type="text"
                   placeholder="e.g., Sneha Sharma"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  maxLength={50}
+                  onChange={(e) => {
+                    const sanitized = e.target.value.replace(/[^a-zA-Z\s.'-]/g, "").slice(0, 50);
+                    setName(sanitized);
+                  }}
                   className="w-full px-4 py-3.5 rounded-xl text-white placeholder-white/50 font-medium text-sm outline-none transition-all duration-200 bg-white/10 border border-[#7AB2B1]/40 focus:border-[#7AB2B1] focus:bg-white/15 focus:ring-2 focus:ring-[#088395]/40"
                 />
               </div>
