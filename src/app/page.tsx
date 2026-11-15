@@ -7,6 +7,7 @@ import DoctorsSection from "@/components/DoctorsSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import ClinicGallery from "@/components/ClinicGallery";
 import WallOfTrust from "@/components/WallOfTrust";
+import FAQSection from "@/components/FAQSection";
 import WhatsAppBooking from "@/components/WhatsAppBooking";
 import Footer from "@/components/Footer";
 import StickyMobileBar from "@/components/StickyMobileBar";
@@ -36,11 +37,14 @@ export default function Home() {
         {/* 6. Wall of Trust — Infinite Review Marquee — Ice Blue #EBF5F7 */}
         <WallOfTrust />
 
-        {/* 7. WhatsApp Appointment Scheduler — Deep Teal Dark Glass */}
+        {/* 7. Patient FAQ & Knowledge Base (AIO/GEO/SEO) — Pure White */}
+        <FAQSection />
+
+        {/* 8. WhatsApp Appointment Scheduler — Deep Teal Dark Glass */}
         <WhatsAppBooking />
       </main>
 
-      {/* 8. Footer — Location & Contact · Deep Teal-Navy */}
+      {/* 9. Footer — Location & Contact · Deep Teal-Navy */}
       <Footer />
 
       {/* 9. Sticky Mobile Conversion Bar (iOS & Android) */}

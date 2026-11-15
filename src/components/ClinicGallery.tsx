@@ -325,7 +325,7 @@ export default function ClinicGallery() {
                   {/* Photo */}
                   <img
                     src={item.src}
-                    alt={item.title}
+                    alt={`${item.title} - Bright Tooth Multispecialty Dental Care in Kumaraswamy Layout, Bengaluru`}
                     className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108 ${
                       isSixthCardWithOverlay ? "filter brightness-[0.7]" : ""
                     }`}
@@ -446,7 +446,7 @@ export default function ClinicGallery() {
               <div className="relative flex-1 bg-black/95 flex items-center justify-center overflow-hidden min-h-[320px] max-h-[64vh]">
                 <img
                   src={selectedPhoto.src}
-                  alt={selectedPhoto.title}
+                  alt={`${selectedPhoto.title} - Bright Tooth Multispecialty Dental Care Clinic in Kumaraswamy Layout, Bengaluru`}
                   className="max-h-[64vh] w-auto max-w-full object-contain mx-auto"
                 />
 

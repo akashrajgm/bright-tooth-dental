@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
 
             <p className="text-white/65 font-light text-sm md:text-base leading-relaxed max-w-md">
-              Nestled in Kumaraswamy Layout, Bengaluru — blending expert dental mastery with comfortable,
+              Top-rated multispecialty dental clinic in Kumaraswamy Layout, Bengaluru — blending expert dental mastery with comfortable,
               advanced clinical care. Dr. Devika Hiremath & Dr. Shadakshari.
             </p>
 

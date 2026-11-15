@@ -59,23 +59,23 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          {/* Headline */}
+          {/* Headline — Primary SEO & Local GEO Heading */}
           <motion.h1
             variants={fadeUp}
-            className="font-serif text-5xl md:text-6xl font-bold text-brand-navy leading-[1.07] tracking-tight"
+            className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-brand-navy leading-[1.1] tracking-tight"
           >
-            Where a{" "}
-            <span className="block mt-1 italic font-normal gradient-text-teal">
-              Bright Smile Begins.
+            Bright Tooth Multispecialty Dental Care
+            <span className="block mt-2 text-2xl sm:text-3xl md:text-4xl font-normal italic gradient-text-teal">
+              Best Dental Clinic in Kumaraswamy Layout, Bengaluru
             </span>
           </motion.h1>
 
-          {/* Sub copy - Official Brand COPY */}
+          {/* Sub copy — Natural & Contextually Rich Local Authority */}
           <motion.p
             variants={fadeUp}
             className="text-brand-navy/75 text-sm md:text-base font-light leading-relaxed max-w-2xl"
           >
-            Bright Tooth Multispeciality Dental Care is the best dental clinic in Kumaraswamy Layout, Bengaluru. Our clinic focuses on preventive care, patient education, child brushing techniques, and long-term oral health strategies. Whether you need a root canal specialist in Bengaluru or a cosmetic dentist in South Bengaluru, our gentle care team is dedicated to creating lasting smiles. Call us at +91 78925 20522 to schedule your appointment.
+            Looking for expert dental care in Kumaraswamy Layout, Bengaluru? Visit Bright Tooth Multispecialty Dental Care for painless root canals, braces, cosmetic dentistry, and family dental care by Dr. Devika Hiremath and Dr. Shadakshari. Experience gentle, sterile, hospital-grade dentistry designed for your complete comfort. Call +91 78925 20522 to schedule your visit today.
           </motion.p>
 
           {/* Stats Bar (updated to exact request) */}

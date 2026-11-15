@@ -155,7 +155,7 @@ export default function ServicesGrid() {
                   <div className="w-full aspect-[16/10] rounded-2xl overflow-hidden mb-5 border border-[#7AB2B1]/20 bg-[#EBF5F7]/50 shadow-inner p-2 flex items-center justify-center">
                     <img
                       src={svc.image}
-                      alt={svc.title}
+                      alt={`${svc.title} - Bright Tooth Multispecialty Dental Care in Kumaraswamy Layout, Bengaluru`}
                       className="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-opacity duration-300 transform group-hover:scale-105 transition-transform duration-500 ease-out"
                       loading="lazy"
                     />

@@ -1,0 +1,35 @@
+# Robots.txt for Bright Tooth Multispecialty Dental Care
+# Optimized for Google, Bing, and AI Answer Engines (Perplexity, GPTBot, ClaudeBot, Gemini)
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Specific AI Answer Engine Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap Index
+Sitemap: https://bright-tooth-dental.vercel.app/sitemap.xml

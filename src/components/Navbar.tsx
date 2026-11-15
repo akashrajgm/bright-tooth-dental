@@ -8,7 +8,8 @@ const NAV_LINKS = [
   { label: "Home",              href: "#home"     },
   { label: "Services",          href: "#services"  },
   { label: "Meet Our Doctors",  href: "#doctors"   },
-  { label: "Immersive Gallery", href: "#gallery"   },
+  { label: "Clinic Gallery",    href: "#gallery"   },
+  { label: "Patient FAQs",      href: "#faq"       },
   { label: "Location",          href: "#location"  },
 ];
 

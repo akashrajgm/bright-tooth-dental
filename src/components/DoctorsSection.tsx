@@ -111,7 +111,7 @@ export default function DoctorsSection() {
                 {doc.image ? (
                   <img
                     src={doc.image}
-                    alt={doc.name}
+                    alt={`${doc.name} - Expert Dental Surgeon at Bright Tooth Multispecialty Dental Care in Kumaraswamy Layout, Bengaluru`}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                 ) : (
