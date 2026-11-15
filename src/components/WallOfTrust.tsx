@@ -129,14 +129,14 @@ export default function WallOfTrust() {
         <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#EBF5F7] to-transparent z-20 pointer-events-none" />
         <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#EBF5F7] to-transparent z-20 pointer-events-none" />
 
-        {/* Marquee Track using Framer Motion */}
+        {/* Marquee Track using Framer Motion (Lively continuous loop) */}
         <motion.div
           className="flex flex-nowrap"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             repeat: Infinity,
             repeatType: "loop",
-            duration: 35,
+            duration: 18,
             ease: "linear",
           }}
           whileHover={{ animationPlayState: "paused" }}

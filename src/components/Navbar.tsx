@@ -83,8 +83,8 @@ export default function Navbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 flex flex-col w-full">
         {/* Tier 1: Top Announcement Bar (Deep Teal #09637E) */}
-        <div className="w-full bg-[#09637E] py-2 px-6 md:px-12 text-white border-b border-white/10 flex items-center justify-between text-xs">
-          <div className="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
+        <div className="w-full bg-[#09637E] py-2 px-4 sm:px-6 md:px-12 text-white border-b border-white/10 flex items-center text-xs">
+          <div className="max-w-7xl mx-auto w-full flex items-center justify-center sm:justify-between gap-4">
             {/* Live status dot */}
             <div className="flex items-center gap-2">
               <span className="relative flex h-1.5 w-1.5">
@@ -98,10 +98,10 @@ export default function Navbar() {
               </span>
             </div>
 
-            {/* Direct call link */}
+            {/* Direct call link (Hidden on mobile to avoid header clutter; mobile users have the Sticky Bottom Bar) */}
             <a
               href="tel:+917892520522"
-              className="hover:text-[#7AB2B1] transition-colors duration-200 font-bold tracking-wide"
+              className="hidden sm:inline-block hover:text-[#7AB2B1] transition-colors duration-200 font-bold tracking-wide"
             >
               Direct Line: +91 78925 20522
             </a>

@@ -35,8 +35,8 @@
   --font-sans:  "Plus Jakarta Sans", system-ui, sans-serif;
 
   /* ── Animations ────────────────────────────────────────── */
-  --animate-marquee:         marquee 45s linear infinite;
-  --animate-marquee-reverse: marquee-reverse 45s linear infinite;
+  --animate-marquee:         marquee 22s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 22s linear infinite;
   --animate-float:           float 5s ease-in-out infinite;
   --animate-pulse-soft:      pulse-soft 3s ease-in-out infinite;
   --animate-spin-slow:       spin-slow 20s linear infinite;

@@ -7,9 +7,9 @@ export default function StickyMobileBar() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Show sticky bar after scrolling past 150px
+    // Show sticky bar smoothly as soon as user scrolls past 50px
     const handleScroll = () => {
-      setVisible(window.scrollY > 150);
+      setVisible(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
