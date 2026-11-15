@@ -218,13 +218,13 @@ export default function DoctorsSection() {
           ))}
         </div>
 
-        {/* ── Balanced 2x2 Metrics Grid ─────────────────────── */}
+        {/* ── Balanced Responsive Metrics Grid (No mobile overlap) ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="grid grid-cols-2 gap-4 max-w-xl mx-auto justify-items-center items-center mt-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 max-w-5xl mx-auto mt-12 w-full"
         >
           {[
             "5.0 ★ Rated Clinic",
@@ -234,7 +234,7 @@ export default function DoctorsSection() {
           ].map((item, index) => (
             <div
               key={`${item}-${index}`}
-              className="w-full min-w-[260px] text-center flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white border border-[#7AB2B1]/30 font-sans text-sm text-[#0A2533] shadow-sm font-medium"
+              className="w-full flex items-center justify-center gap-2.5 px-4 py-3.5 rounded-2xl bg-white border border-[#7AB2B1]/30 font-sans text-xs sm:text-sm text-[#0A2533] shadow-sm font-semibold text-center"
             >
               <Award className="w-4 h-4 text-[#09637E] flex-shrink-0" />
               <span>{item}</span>

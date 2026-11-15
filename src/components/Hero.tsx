@@ -90,8 +90,8 @@ export default function Hero() {
               { v: "Open All 7 Days", l: "Weekly Care"    },
             ].map((s) => (
               <div key={s.l} className="flex flex-col">
-                <span className="font-serif text-xl sm:text-2xl font-bold text-[#09637E] whitespace-nowrap">{s.v}</span>
-                <span className="text-[10px] font-bold text-brand-navy/55 uppercase tracking-wider mt-0.5 leading-tight">{s.l}</span>
+                <span className="font-serif text-lg sm:text-2xl font-bold text-[#09637E] leading-tight">{s.v}</span>
+                <span className="text-[10px] font-bold text-brand-navy/55 uppercase tracking-wider mt-1 leading-tight">{s.l}</span>
               </div>
             ))}
           </motion.div>
